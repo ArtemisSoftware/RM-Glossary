@@ -3,11 +3,11 @@ package com.artemissoftware.rmglossary.data.mappers
 import com.artemissoftware.rmglossary.data.remote.dto.CharacterDto
 import com.artemissoftware.rmglossary.data.remote.dto.LocationDto
 import com.artemissoftware.rmglossary.data.remote.dto.OriginDto
-import com.artemissoftware.rmglossary.domain.models.Gender
-import com.artemissoftware.rmglossary.domain.models.Status
 import com.artemissoftware.rmglossary.domain.models.Character
+import com.artemissoftware.rmglossary.domain.models.Gender
 import com.artemissoftware.rmglossary.domain.models.Location
 import com.artemissoftware.rmglossary.domain.models.Origin
+import com.artemissoftware.rmglossary.domain.models.Status
 
 internal fun String.toGender() = when (lowercase()) {
     "female" -> Gender.Female
@@ -31,7 +31,6 @@ internal fun OriginDto.toOrigin(): Origin {
 }
 
 fun CharacterDto.toCharacter(): Character {
-
     return Character(
         created = created,
         episodeIds = episode.map { it.substring(it.lastIndexOf("/") + 1).toInt() },
@@ -43,6 +42,6 @@ fun CharacterDto.toCharacter(): Character {
         origin = origin.toOrigin(),
         species = species,
         status = status.toStatus(),
-        type = type
+        type = type,
     )
 }
