@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RMGlossary</string>
+    <string name="last_known_location">Last known location</string>
+    <string name="species">Species</string>
+    <string name="gender">Gender</string>
+    <string name="type">Type</string>
+    <string name="origin">Origin</string>
+    <string name="episode_count">Episode count</string>
 </resources>
