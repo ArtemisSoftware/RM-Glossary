@@ -34,7 +34,7 @@ fun DataInfo(
 
 @Preview(showBackground = true)
 @Composable
-fun DataInfoPreview() {
+private fun DataInfoPreview() {
     DataInfo(
         title = "title",
         description = "description",

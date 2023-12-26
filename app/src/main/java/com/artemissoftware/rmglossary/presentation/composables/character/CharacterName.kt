@@ -14,11 +14,11 @@ fun CharacterName(name: String) {
         fontSize = 42.sp,
         lineHeight = 42.sp,
         fontWeight = FontWeight.Bold,
-        color = Action
+        color = Action,
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun CharacterNamePreview() {
     CharacterName(name = "Rick Sanchez")
