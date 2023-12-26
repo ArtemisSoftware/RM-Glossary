@@ -15,8 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.artemissoftware.rmglossary.domain.models.Status
-import com.artemissoftware.rmglossary.ui.theme.Primary
 import com.artemissoftware.rmglossary.ui.theme.RMGlossaryTheme
+import com.artemissoftware.rmglossary.ui.theme.TextPrimary
 
 @Composable
 fun CharacterStatus(status: Status) {
@@ -33,7 +33,7 @@ fun CharacterStatus(status: Status) {
         Text(
             text = "Status: ${status.displayName}",
             fontSize = 20.sp,
-            color = Primary,
+            color = TextPrimary,
         )
     }
 }
