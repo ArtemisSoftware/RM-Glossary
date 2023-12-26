@@ -1,9 +1,11 @@
 package com.artemissoftware.rmglossary.presentation.details.composables
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.artemissoftware.rmglossary.R
 import com.artemissoftware.rmglossary.domain.models.Character
 import com.artemissoftware.rmglossary.presentation.composables.DataInfo
@@ -13,7 +15,10 @@ fun DetailPanel(
     character: Character,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier) {
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(32.dp),
+    ) {
         DataInfo(
             title = stringResource(R.string.last_known_location), 
             description = character.location.name,
