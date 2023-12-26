@@ -1,4 +1,4 @@
-package com.artemissoftware.rmglossary.presentation.composables
+package com.artemissoftware.rmglossary.presentation.composables.character
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
