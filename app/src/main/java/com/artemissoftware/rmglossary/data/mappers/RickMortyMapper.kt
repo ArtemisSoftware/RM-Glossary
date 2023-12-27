@@ -1,9 +1,11 @@
 package com.artemissoftware.rmglossary.data.mappers
 
 import com.artemissoftware.rmglossary.data.remote.dto.CharacterDto
+import com.artemissoftware.rmglossary.data.remote.dto.EpisodeDto
 import com.artemissoftware.rmglossary.data.remote.dto.LocationDto
 import com.artemissoftware.rmglossary.data.remote.dto.OriginDto
 import com.artemissoftware.rmglossary.domain.models.Character
+import com.artemissoftware.rmglossary.domain.models.Episode
 import com.artemissoftware.rmglossary.domain.models.Gender
 import com.artemissoftware.rmglossary.domain.models.Location
 import com.artemissoftware.rmglossary.domain.models.Origin
@@ -43,5 +45,18 @@ fun CharacterDto.toCharacter(): Character {
         species = species,
         status = status.toStatus(),
         type = type,
+    )
+}
+
+fun EpisodeDto.toEpisode(): Episode {
+    return Episode(
+        id = id,
+        name = name,
+        seasonNumber = episode.filter { it.isDigit() }.take(2).toInt(),
+        episodeNumber = episode.filter { it.isDigit() }.takeLast(2).toInt(),
+        airDate = airDate,
+        characterIdsInEpisode = characters.map {
+            it.substring(startIndex = it.lastIndexOf("/") + 1).toInt()
+        },
     )
 }

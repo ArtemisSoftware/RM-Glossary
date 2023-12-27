@@ -2,6 +2,7 @@ package com.artemissoftware.rmglossary
 
 import com.artemissoftware.rmglossary.data.remote.dto.OriginDto
 import com.artemissoftware.rmglossary.domain.models.Character
+import com.artemissoftware.rmglossary.domain.models.Episode
 import com.artemissoftware.rmglossary.domain.models.Gender
 import com.artemissoftware.rmglossary.domain.models.Location
 import com.artemissoftware.rmglossary.domain.models.Origin
@@ -31,5 +32,14 @@ object MockDomainModels {
         imageUrl = "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
         episodeIds = listOf(1, 2, 3),
         created = "2017-11-04T18:48:46.250Z",
+    )
+
+    val episode = Episode(
+        id = 1,
+        name = "Pilot",
+        seasonNumber = 3,
+        episodeNumber = 4,
+        airDate = "December 2, 2013",
+        characterIdsInEpisode = listOf(1,2),
     )
 }
