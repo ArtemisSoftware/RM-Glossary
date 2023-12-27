@@ -10,5 +10,5 @@ data class EpisodeDto(
     val episode: String,
     @SerialName("air_date")
     val airDate: String,
-    val characters: List<String>
+    val characters: List<String>,
 )
